@@ -1,6 +1,7 @@
 import unittest
 from calculadora import Calculadora
 
+
 class TestCalculadora(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -53,6 +54,10 @@ class TestCalculadora(unittest.TestCase):
     def test_sumar_decimales_falla(self):
         resultado = self.calc.sumar(4, 9.9)
         self.assertEqual('Solo se admiten números enteros positivos', resultado)
+    
+    def test_restar_ocho_menos_cinco(self):
+        resultado = self.calc.restar(8, 5)
+        self.assertEqual(3, resultado)
 
 if __name__ == '__main__':
     unittest.main()
